@@ -1,0 +1,9 @@
+name: 'is-semantic-pr'
+description: 'Creates an annotation with the resulting release type when using semantic-release'
+inputs:
+  token:
+    description: 'GitHub token to be used'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

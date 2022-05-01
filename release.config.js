@@ -25,13 +25,6 @@ configuration.plugins.push('@semantic-release/changelog');
 
 configuration.plugins.push('semantic-release-license');
 
-configuration.plugins.push(['@amanda-mitchell/semantic-release-npm-multiple', {
-    'registries': {
-        'github': {},
-        'public': {}
-    }
-}]);
-
 configuration.plugins.push(['@semantic-release/exec', {
     'prepareCmd': './.github/workflows/build.sh'
 }]);
@@ -42,7 +35,7 @@ configuration.plugins.push(['@semantic-release/github', {
 }]);
 
 configuration.plugins.push(['@semantic-release/git', {
-    'assets': ['CHANGELOG.md', 'LICENSE'],
+    'assets': ['CHANGELOG.md', 'LICENSE', 'dist/**/*'],
     'message': 'chore(release): :bookmark: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
 }]);
 
@@ -58,12 +51,5 @@ if(dockerImages.length > 0) {
         images: dockerImages
     }]);
 }
-
-configuration.plugins.push(['@qiwi/semantic-release-gh-pages-plugin', {
-    'msg': 'docs: Updated for <%= nextRelease.gitTag %>',
-    'src': './docs',
-    'dst': `./${process.env.BRANCH}`,
-    'pullTagsBranch': 'main'
-}]);
 
 module.exports = configuration;
