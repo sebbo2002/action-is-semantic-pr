@@ -12,9 +12,18 @@ is left.
 ## ⚡️ Quick Start
 
 ```
-uses: sebbo2002/action-is-semantic-pr
-with:
-  token: ${{ secrets.GITHUB_TOKEN }}
+name: is-semantic-pr
+on:
+  - pull_request
+
+jobs:
+  release-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🤖 is-semantic-release
+        uses: sebbo2002/action-is-semantic-pr@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 
