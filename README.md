@@ -11,7 +11,7 @@ is left.
 
 ## ⚡️ Quick Start
 
-```
+```yaml
 name: is-semantic-pr
 on:
   - pull_request
