@@ -3,7 +3,7 @@ on:
   - pull_request
 
 jobs:
-  release-bot:
+  is-semantic-release:
     runs-on: ubuntu-latest
     steps:
       - name: 🤖 is-semantic-release
