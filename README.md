@@ -11,7 +11,7 @@ is left.
 
 ## ⚡️ Quick Start
 
-```
+```yaml
 uses: sebbo2002/action-is-semantic-pr
 with:
   token: ${{ secrets.GITHUB_TOKEN }}
