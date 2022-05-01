@@ -43927,33 +43927,56 @@ function wrappy (fn, cb) {
 
 "use strict";
 
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const core_1 = __importDefault(__nccwpck_require__(2186));
-const github_1 = __importDefault(__nccwpck_require__(5438));
+const core = __importStar(__nccwpck_require__(2186));
+const github = __importStar(__nccwpck_require__(5438));
 const lib_1 = __importDefault(__nccwpck_require__(6791));
 try {
-    if (!github_1.default.context.payload.pull_request) {
-        core_1.default.setFailed('This action can only be used in a pull request context');
+    if (!github.context.payload.pull_request) {
+        core.setFailed('This action can only be used in a pull request context');
         process.exit(1);
     }
-    const token = core_1.default.getInput('token');
+    const token = core.getInput('token');
     const context = {
-        owner: github_1.default.context.repo.owner,
-        repo: github_1.default.context.repo.repo,
-        pull_number: github_1.default.context.payload.pull_request.number
+        owner: github.context.repo.owner,
+        repo: github.context.repo.repo,
+        pull_number: github.context.payload.pull_request.number
     };
-    const action = new lib_1.default(token, context, core_1.default);
-    action.run().catch(error => core_1.default.setFailed(error.message));
+    const action = new lib_1.default(token, context, core);
+    action.run().catch(error => core.setFailed(error.message));
 }
 catch (error) {
     if (error instanceof Error) {
-        core_1.default.setFailed(error.message);
+        core.setFailed(error.message);
     }
     else {
-        core_1.default.setFailed(String(error));
+        core.setFailed(String(error));
     }
 }
 

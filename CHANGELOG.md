@@ -1,3 +1,10 @@
+# [1.0.0-develop.4](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.3...v1.0.0-develop.4) (2022-05-01)
+
+
+### Bug Fixes
+
+* Fix core import bundling ([d638dad](https://github.com/sebbo2002/action-is-semantic-pr/commit/d638dadfd26ea64fe867fd190893c34b3bb59669))
+
 # [1.0.0-develop.3](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.2...v1.0.0-develop.3) (2022-05-01)
 
 
