@@ -3,6 +3,14 @@
   "bugs": {
     "url": "https://github.com/sebbo2002/js-template/issues"
   },
+  "dependencies": {
+    "@actions/core": "^1.7.0",
+    "@actions/github": "^5.0.1",
+    "@octokit/rest": "^18.12.0",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@types/semantic-release": "^17.2.3",
+    "cosmiconfig": "^7.0.1"
+  },
   "description": "GitHub Action that creates an annotation with the resulting release type when using semantic-release",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
@@ -24,7 +32,7 @@
     "ts-node": "^10.7.0"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "files": [
     "/dist"
@@ -41,17 +49,9 @@
     "build": "ncc build ./src/index.ts -m --license licenses.txt",
     "build-all": "./.github/workflows/build.sh",
     "coverage": "nyc mocha",
-    "license-check": "license-checker --production --onlyAllow \"MIT;ISC;Apache-2.0\"",
+    "license-check": "license-checker --production",
     "lint": "eslint . --ext .ts,.json",
     "test": "mocha"
   },
-  "version": "1.0.0",
-  "dependencies": {
-    "@actions/core": "^1.7.0",
-    "@actions/github": "^5.0.1",
-    "@octokit/rest": "^18.12.0",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@types/semantic-release": "^17.2.3",
-    "cosmiconfig": "^7.0.1"
-  }
+  "version": "1.0.0"
 }
