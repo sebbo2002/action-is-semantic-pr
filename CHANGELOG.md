@@ -1,3 +1,25 @@
+# 1.0.0-develop.1 (2022-05-01)
+
+
+### Bug Fixes
+
+* **CI:** Fix DockerHub container release ([01b7534](https://github.com/sebbo2002/action-is-semantic-pr/commit/01b753406d1f1ef24a949c7d7b946d99b779d013))
+
+
+### chore
+
+* Remove node.js 10 Support ([2b910c0](https://github.com/sebbo2002/action-is-semantic-pr/commit/2b910c09bc8a41085fc4472159494d8738d5521e))
+
+
+### Features
+
+* first commit ([4144248](https://github.com/sebbo2002/action-is-semantic-pr/commit/41442488d55fd1d7237cdb4738ff1df800045145))
+
+
+### BREAKING CHANGES
+
+* Removed support for node.js v10
+
 # [1.0.0-develop.3](https://github.com/sebbo2002/js-template-test/compare/v1.0.0-develop.2...v1.0.0-develop.3) (2021-05-08)
 
 
