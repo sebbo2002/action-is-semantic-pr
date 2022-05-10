@@ -8,6 +8,7 @@ describe('CoreMock', function () {
         const error = new Error('Error');
 
         core.info('Info');
+        core.endGroup();
         core.error(error);
         core.startGroup('Start group');
         core.warning('Warning');
