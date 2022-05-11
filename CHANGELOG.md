@@ -1,3 +1,11 @@
+# [1.0.0-develop.7](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.6...v1.0.0-develop.7) (2022-05-11)
+
+
+### Features
+
+* Add output variable with release type ([2657dc9](https://github.com/sebbo2002/action-is-semantic-pr/commit/2657dc9340ecca2f3a90863b4fde3f4c1544a336))
+* Fail if merge woun't trigger a release ([90370dc](https://github.com/sebbo2002/action-is-semantic-pr/commit/90370dca8f9bd96fd4469a0e14b0f8807054ffda))
+
 # [1.0.0-develop.6](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.5...v1.0.0-develop.6) (2022-05-10)
 
 # [1.0.0-develop.5](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.4...v1.0.0-develop.5) (2022-05-01)
