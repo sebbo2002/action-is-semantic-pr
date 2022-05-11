@@ -133,7 +133,7 @@ export default class Action {
         if (releaseType) {
             this.core.notice(`This PR will create a ${releaseType} release`);
         } else {
-            this.core.warning('This PR woun’t trigger a release');
+            this.core.error('This PR woun’t trigger a release!');
         }
     }
 
