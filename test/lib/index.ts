@@ -52,6 +52,7 @@ describe('Action', function () {
         assert.deepStrictEqual(getBuffer(), [
             ['info', 'Hmm, what do we have here. So Pull Request #110 you want me to look at.'],
             ['info', 'No semantic-release configuration found'],
+            ['output', 'type', 'patch'],
             ['notice', 'This PR will create a patch release']
         ]);
     });
@@ -72,7 +73,8 @@ describe('Action', function () {
                     '{\n  "releaseRules": [\n    {\n      "type": "chore",\n      "scope": "deps",\n      "release": "patch"\n    },\n    {\n      "type": "chore",\n      "scope": "package",\n      "release": "patch"\n    },\n    {\n      "type": "build",\n      "scope": "deps",\n      "release": "patch"\n    },\n    {\n      "type": "docs",\n      "release": "patch"\n    }\n  ]\n}'
                 ]
             ]],
-            ['warning', 'This PR woun’t trigger a release']
+            ['output', 'type', null],
+            ['error', 'This PR woun’t trigger a release!']
         ]);
     });
 
@@ -92,6 +94,7 @@ describe('Action', function () {
                     '{\n  "preset": "angular",\n  "releaseRules": [\n    {\n      "type": "refactor",\n      "release": "patch"\n    },\n    {\n      "type": "style",\n      "release": "patch"\n    },\n    {\n      "type": "build",\n      "scope": "deps",\n      "release": "patch"\n    },\n    {\n      "type": "docs",\n      "release": "patch"\n    }\n  ]\n}'
                 ]
             ]],
+            ['output', 'type', 'minor'],
             ['notice', 'This PR will create a minor release']
         ]);
     });
