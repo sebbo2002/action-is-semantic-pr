@@ -128,6 +128,8 @@ export default class Action {
             }
         };
         const releaseType = await analyzeCommits(configuration || {}, context);
+        this.core.setOutput('type', releaseType);
+
         if (releaseType) {
             this.core.notice(`This PR will create a ${releaseType} release`);
         } else {
