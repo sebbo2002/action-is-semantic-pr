@@ -127,14 +127,24 @@ export default class Action {
                 error: message => this.core.error(message)
             }
         };
+
+        const hasConventionalCommitLike = !!commits.find(commit => Action.isConventionalCommitLike(commit.commit.message));
         const releaseType = await analyzeCommits(configuration || {}, context);
         this.core.setOutput('type', releaseType);
 
         if (releaseType) {
-            this.core.notice(`This PR will create a ${releaseType} release`);
-        } else {
-            this.core.error('This PR woun’t trigger a release!');
+            this.core.notice(`This PR will create a ${releaseType} release 🎉`);
         }
+        else if(hasConventionalCommitLike) {
+            this.core.warning('This PR contains conventional commits, but no release will be triggered on merge 😞');
+        }
+        else {
+            throw new Error('This PR does not seem to contain any conventional commits!');
+        }
+    }
+
+    private static isConventionalCommitLike(message: string): boolean {
+        return !!message.match(/^(feat|fix|docs|style|refactor|perf|test|chore|revert|build)(\(.+\))?: .+/);
     }
 
     private async getPR(): Promise<{id: number, merged: boolean, base: {sha: string}}> {

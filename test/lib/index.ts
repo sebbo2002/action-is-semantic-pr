@@ -53,7 +53,7 @@ describe('Action', function () {
             ['info', 'Hmm, what do we have here. So Pull Request #110 you want me to look at.'],
             ['info', 'No semantic-release configuration found'],
             ['output', 'type', 'patch'],
-            ['notice', 'This PR will create a patch release']
+            ['notice', 'This PR will create a patch release 🎉']
         ]);
     });
 
@@ -74,7 +74,7 @@ describe('Action', function () {
                 ]
             ]],
             ['output', 'type', null],
-            ['error', 'This PR woun’t trigger a release!']
+            ['warning', 'This PR contains conventional commits, but no release will be triggered on merge 😞']
         ]);
     });
 
@@ -95,7 +95,19 @@ describe('Action', function () {
                 ]
             ]],
             ['output', 'type', 'minor'],
-            ['notice', 'This PR will create a minor release']
+            ['notice', 'This PR will create a minor release 🎉']
         ]);
+    });
+
+    it('should work with PRs which have no convential commits included', async function () {
+        const context: Context = {
+            owner: 'sebbo2002',
+            repo: 'ical-generator',
+            pull_number: 190
+        };
+
+        await assert.rejects(async () => {
+            await new Action(token, context, core).run();
+        }, /This PR does not seem to contain any conventional commits!/);
     });
 });
