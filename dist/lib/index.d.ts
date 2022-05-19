@@ -15,6 +15,7 @@ export default class Action {
     private readonly core;
     constructor(token: string, context: Context, core: CoreInterface);
     run(): Promise<void>;
+    private static isConventionalCommitLike;
     private getPR;
     private getSemanticReleaseConfig;
     private static downloadFile;
