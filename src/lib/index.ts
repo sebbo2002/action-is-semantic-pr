@@ -144,7 +144,7 @@ export default class Action {
     }
 
     private static isConventionalCommitLike(message: string): boolean {
-        return !!message.match(/^(feat|fix|docs|style|refactor|perf|test|chore|revert|build)(\(.+\))?: .+/);
+        return !!message.match(/^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?: .+/);
     }
 
     private async getPR(): Promise<{id: number, merged: boolean, base: {sha: string}}> {
