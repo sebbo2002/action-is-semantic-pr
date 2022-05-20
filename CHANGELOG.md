@@ -1,3 +1,10 @@
+# [1.0.0-develop.10](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.9...v1.0.0-develop.10) (2022-05-20)
+
+
+### Bug Fixes
+
+* Add `ci` type ([e63c055](https://github.com/sebbo2002/action-is-semantic-pr/commit/e63c055c7389e01688fa6a9abbeb16befe89cb48))
+
 # [1.0.0-develop.9](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.8...v1.0.0-develop.9) (2022-05-20)
 
 

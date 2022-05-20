@@ -44119,7 +44119,7 @@ class Action {
         });
     }
     static isConventionalCommitLike(message) {
-        return !!message.match(/^(feat|fix|docs|style|refactor|perf|test|chore|revert|build)(\(.+\))?: .+/);
+        return !!message.match(/^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?: .+/);
     }
     getPR() {
         return __awaiter(this, void 0, void 0, function* () {
