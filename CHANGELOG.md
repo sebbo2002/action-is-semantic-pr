@@ -1,3 +1,17 @@
+# [1.0.0-develop.9](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.8...v1.0.0-develop.9) (2022-05-20)
+
+
+### Reverts
+
+* Revert "ci: Remove GH_TOKEN and use GITHUB_TOKEN" ([b5c2eb6](https://github.com/sebbo2002/action-is-semantic-pr/commit/b5c2eb66170b38bda1e49ad5bb5cf02bd13eb8e4))
+
+# [1.0.0-develop.8](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.7...v1.0.0-develop.8) (2022-05-19)
+
+
+### Features
+
+* emit warning if there are conventional commits, but no release is triggered ([194c90b](https://github.com/sebbo2002/action-is-semantic-pr/commit/194c90b6e911f93f5cb6140376b9ac73e6ea0eac))
+
 # [1.0.0-develop.7](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.0-develop.6...v1.0.0-develop.7) (2022-05-11)
 
 
