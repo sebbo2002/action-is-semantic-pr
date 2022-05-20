@@ -4,6 +4,7 @@ description: 'Creates an annotation with the resulting release type when using s
 inputs:
   token:
     description: 'GitHub token to be used'
+    default: ${{ secrets.GITHUB_TOKEN }}
     required: true
 runs:
   using: 'node16'
