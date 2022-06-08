@@ -10,7 +10,7 @@ jobs:
   tests:
     name: Unit Tests
     runs-on: ubuntu-latest
-    if: secrets.GH_TOKEN && (contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main')
+    if: contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main'
     strategy:
       matrix:
         node: [14.x, 16.x, 18.x]
@@ -27,12 +27,12 @@ jobs:
       - name: ⏳ Run tests
         run: npm run test
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   coverage:
     name: Code Coverage / Lint
     runs-on: ubuntu-latest
-    if: secrets.GH_TOKEN && (contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main')
+    if: contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main'
     steps:
       - name: ☁️ Checkout Project
         uses: actions/checkout@v3
@@ -48,7 +48,7 @@ jobs:
       - name: ⚙️ Build project
         run: npm run build-all
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   license-checker:
     name: License Checker
