@@ -21,9 +21,6 @@ mkdir -p ./docs/
 rm -rf ./docs/coverage/ ./docs/reference/ ./docs/tests/
 
 
-# TypeDoc in ./docs/referece
-npx typedoc
-
 # Test Report in ./docs/tests
 npx mocha --reporter mochawesome
 mv -f ./mochawesome-report/mochawesome.html ./mochawesome-report/index.html

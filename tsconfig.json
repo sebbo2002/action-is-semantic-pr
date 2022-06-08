@@ -4,15 +4,14 @@
         "esModuleInterop": true,
         "module": "none",
         "moduleResolution": "node",
-        "outDir": "./dist",
         "sourceMap": true,
         "strict": true,
-        "target": "es6"
+        "target": "es6",
+        "typeRoots": [
+            "node_modules/@types",
+            "src/types"
+        ]
     },
-    "exclude": [
-        "node_modules",
-        "**/*.spec.ts"
-    ],
     "include": [
         "src/**/*"
     ]
