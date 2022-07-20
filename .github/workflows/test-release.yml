@@ -17,12 +17,14 @@ jobs:
       - name: 🔧 Setup node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 16.x
           cache: 'npm'
       - name: 📦 Install dependencies
         run: npm ci
       - name: ⏳ Run tests
         run: npm run test
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   coverage:
     name: Code Coverage / Lint
@@ -34,6 +36,7 @@ jobs:
       - name: 🔧 Setup node.js
         uses: actions/setup-node@v3
         with:
+          node-version: 16.x
           cache: 'npm'
       - name: 📦 Install dependencies
         run: npm ci
@@ -41,6 +44,8 @@ jobs:
         run: npm run lint
       - name: ⚙️ Build project
         run: npm run build-all
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   license-checker:
     name: License Checker

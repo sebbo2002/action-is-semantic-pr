@@ -1,13 +1,17 @@
 {
   "author": "Sebastian Pekarek <mail@sebbo.net>",
   "bugs": {
-    "url": "https://github.com/sebbo2002/js-template/issues"
+    "url": "https://github.com/sebbo2002/action-is-semantic-pr/issues"
   },
   "dependencies": {
     "@actions/core": "^1.8.0",
-    "@actions/github": "^5.0.1"
+    "@actions/github": "^5.0.1",
+    "@octokit/rest": "^18.12.0",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@types/semantic-release": "^17.2.3",
+    "cosmiconfig": "^7.0.1"
   },
-  "description": "A template that I use to start new projects and services.",
+  "description": "GitHub Action that creates an annotation with the resulting release type when using semantic-release",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/exec": "^6.0.3",
@@ -29,18 +33,18 @@
     "ts-node": "^10.8.1"
   },
   "engines": {
-    "node": ">=14.13.1"
+    "node": ">=16.0.0"
   },
   "exports": "./dist/index.js",
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/sebbo2002/js-template#readme",
+  "homepage": "https://github.com/sebbo2002/action-is-semantic-pr#readme",
   "license": "MIT",
-  "name": "@sebbo2002/js-template-test",
+  "name": "@sebbo2002/action-is-semantic-pr",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sebbo2002/js-template.git"
+    "url": "git+https://github.com/sebbo2002/action-is-semantic-pr.git"
   },
   "scripts": {
     "build": "ncc build ./src/index.ts --license licenses.txt",
