@@ -1,8 +1,8 @@
 'use strict';
 
 import assert from 'assert';
-import { core, getBuffer, resetBuffer } from '../../src/lib/core-mock';
-import Action, { Context } from '../../src/lib';
+import { core, resetBuffer, getBuffer } from '../../src/lib/core-mock.js';
+import Action, { Context } from '../../src/lib/index.js';
 
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 if (!token) {
