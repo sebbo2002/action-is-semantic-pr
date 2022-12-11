@@ -1,6 +1,11 @@
 name: Test & Release
 on:
-  push: null
+  push:
+    branches-ignore:
+      - 'gh-pages'
+      - 'depfu/**'
+      - 'dependabot/**'
+      - 'template-updater/**'
   pull_request: null
 
 jobs:
