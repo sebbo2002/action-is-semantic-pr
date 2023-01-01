@@ -1,3 +1,5 @@
+# [2.0.0-develop.2](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.0-develop.1...v2.0.0-develop.2) (2023-01-01)
+
 # [2.0.0-develop.1](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.3-develop.1...v2.0.0-develop.1) (2022-12-27)
 
 
