@@ -15,7 +15,7 @@ describe('Action', function () {
         resetBuffer();
     });
 
-    it('shoulkd throw error if PR doesn\'t exist', async function () {
+    it('should throw error if PR doesn\'t exist', async function () {
         const context: Context = {
             owner: 'sebbo2002',
             repo: 'ical-generator',

@@ -2,10 +2,9 @@
     "compilerOptions": {
         "declaration": true,
         "esModuleInterop": true,
-        "module": "es2020",
-        "moduleResolution": "node16",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
         "sourceMap": true,
-        "strict": true,
         "target": "es6",
         "typeRoots": [
             "node_modules/@types",
