@@ -1,5 +1,5 @@
 import { Octokit } from '@octokit/rest';
-import { CoreInterface } from './core-mock';
+import { CoreInterface } from './core-mock.js';
 
 import { mkdtemp, rm } from 'fs/promises';
 import { join } from 'path';
@@ -14,6 +14,7 @@ import type {
     Context as SemanticReleaseContext,
     Commit as SemanticReleaseCommit
 } from 'semantic-release';
+import { LoggerFunction } from 'semantic-release';
 
 
 export interface Context {
@@ -94,7 +95,11 @@ export default class Action {
             this.core.info('No semantic-release configuration found');
         }
 
+        const loggerFn: LoggerFunction = () => ({});
         const context: SemanticReleaseAnalyzeContext = {
+            branch: {
+                name: ''
+            },
             commits: commits.map(commit => ({
                 commit: {
                     long: commit.sha,
@@ -123,7 +128,22 @@ export default class Action {
             cwd: process.cwd(),
             env: {},
             logger: {
-                log: () => ({}),
+                await: loggerFn,
+                complete: loggerFn,
+                debug: loggerFn,
+                fatal: loggerFn,
+                fav: loggerFn,
+                info: loggerFn,
+                log: loggerFn,
+                note: loggerFn,
+                pause: loggerFn,
+                pending: loggerFn,
+                star: loggerFn,
+                start: loggerFn,
+                success: loggerFn,
+                wait: loggerFn,
+                warn: loggerFn,
+                watch: loggerFn,
                 error: message => this.core.error(message)
             }
         };

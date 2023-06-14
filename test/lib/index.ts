@@ -1,8 +1,8 @@
 'use strict';
 
 import assert from 'assert';
-import { core, getBuffer, resetBuffer } from '../../src/lib/core-mock';
-import Action, { Context } from '../../src/lib';
+import { core, resetBuffer, getBuffer } from '../../src/lib/core-mock.js';
+import Action, { Context } from '../../src/lib/index.js';
 
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 if (!token) {
@@ -15,7 +15,7 @@ describe('Action', function () {
         resetBuffer();
     });
 
-    it('shoulkd throw error if PR doesn\'t exist', async function () {
+    it('should throw error if PR doesn\'t exist', async function () {
         const context: Context = {
             owner: 'sebbo2002',
             repo: 'ical-generator',
