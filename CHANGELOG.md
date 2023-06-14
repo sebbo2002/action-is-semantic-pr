@@ -1,3 +1,15 @@
+# [2.0.0-develop.5](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.0-develop.4...v2.0.0-develop.5) (2023-06-14)
+
+
+### Build System
+
+* Deprecate node.js v14 / v17 ([7a2de45](https://github.com/sebbo2002/action-is-semantic-pr/commit/7a2de45c12f19a1ec441b3a004f4aa935efc197c))
+
+
+### BREAKING CHANGES
+
+* The node.js versions v14 and v17 are no longer maintained and are therefore no longer supported. See https://nodejs.dev/en/about/releases/ for more details on node.js release cycles.
+
 # [2.0.0-develop.4](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.0-develop.3...v2.0.0-develop.4) (2023-04-25)
 
 # [2.0.0-develop.3](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.0-develop.2...v2.0.0-develop.3) (2023-03-30)
