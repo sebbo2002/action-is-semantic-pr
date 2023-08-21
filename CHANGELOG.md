@@ -1,3 +1,39 @@
+## [2.0.1-develop.1](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.0...v2.0.1-develop.1) (2023-07-12)
+
+# [2.0.0](https://github.com/sebbo2002/action-is-semantic-pr/compare/v1.0.2...v2.0.0) (2023-06-14)
+
+
+### Build System
+
+* Deprecate node.js 12 ([426588b](https://github.com/sebbo2002/action-is-semantic-pr/commit/426588b4bb7bde2924bbc92006ca839e960872e1))
+* Deprecate node.js v14 / v17 ([7a2de45](https://github.com/sebbo2002/action-is-semantic-pr/commit/7a2de45c12f19a1ec441b3a004f4aa935efc197c))
+* Native ESM support ([7b86a4f](https://github.com/sebbo2002/action-is-semantic-pr/commit/7b86a4f1187c387a3a5792e1fb72d822b04e3631))
+
+
+* Merge branch 'typescript' into github-actions ([f4a742e](https://github.com/sebbo2002/action-is-semantic-pr/commit/f4a742ed013d172ff2c3e963987038113f8edcbb))
+
+
+### BREAKING CHANGES
+
+* The node.js versions v14 and v17 are no longer maintained and are therefore no longer supported. See https://nodejs.dev/en/about/releases/ for more details on node.js release cycles.
+* From now on, only node.js ^14.8.0 || >=16.0.0 are supported
+* Only Support for node.js >=14.13.1
+* Only Support for node.js ^12.20.0 || >=14.13.1
+
+# [2.0.0-develop.5](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.0-develop.4...v2.0.0-develop.5) (2023-06-14)
+
+
+### Build System
+
+* Deprecate node.js v14 / v17 ([7a2de45](https://github.com/sebbo2002/action-is-semantic-pr/commit/7a2de45c12f19a1ec441b3a004f4aa935efc197c))
+
+
+### BREAKING CHANGES
+
+* The node.js versions v14 and v17 are no longer maintained and are therefore no longer supported. See https://nodejs.dev/en/about/releases/ for more details on node.js release cycles.
+
+# [2.0.0-develop.4](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.0-develop.3...v2.0.0-develop.4) (2023-04-25)
+
 # [2.0.0-develop.3](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.0-develop.2...v2.0.0-develop.3) (2023-03-30)
 
 
