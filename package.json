@@ -9,7 +9,8 @@
     "@octokit/rest": "^19.0.5",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@types/semantic-release": "^17.2.4",
-    "cosmiconfig": "^8.0.0"
+    "cosmiconfig": "^8.0.0",
+    "tsup": "^7.2.0"
   },
   "description": "GitHub Action that creates an annotation with the resulting release type when using semantic-release",
   "devDependencies": {
@@ -49,7 +50,7 @@
     "url": "git+https://github.com/sebbo2002/action-is-semantic-pr.git"
   },
   "scripts": {
-    "build": "rm -rf ./dist && ncc build ./src/index.ts --license licenses.txt",
+    "build": "rm -rf ./dist && ncc build ./src/index.ts --license licenses.txt && tsup",
     "build-all": "./.github/workflows/build.sh",
     "coverage": "c8 mocha",
     "license-check": "license-checker --production --summary",
