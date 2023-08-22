@@ -9,31 +9,32 @@
     "@octokit/rest": "^19.0.5",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@types/semantic-release": "^17.2.4",
-    "cosmiconfig": "^8.0.0"
+    "cosmiconfig": "^8.2.0",
+    "tsup": "^7.2.0"
   },
   "description": "GitHub Action that creates an annotation with the resulting release type when using semantic-release",
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^9.0.2",
+    "@semantic-release/npm": "^10.0.4",
     "@types/express": "^4.17.13",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.11.10",
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
     "@vercel/ncc": "^0.36.1",
-    "c8": "^7.11.3",
-    "eslint": "^8.29.0",
-    "eslint-plugin-jsonc": "^2.5.0",
+    "c8": "^8.0.1",
+    "eslint": "^8.47.0",
+    "eslint-plugin-jsonc": "^2.9.0",
     "esm": "^3.2.25",
     "license-checker": "^25.0.1",
-    "mocha": "^10.1.0",
+    "mocha": "^10.2.0",
     "mochawesome": "^7.1.3",
     "semantic-release-license": "^1.0.3",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.8.1",
-    "typescript": "^5.0.2"
+    "typescript": "^5.1.6"
   },
   "engines": {
     "node": "^16.0.0 || >=18.0.0"
@@ -49,7 +50,7 @@
     "url": "git+https://github.com/sebbo2002/action-is-semantic-pr.git"
   },
   "scripts": {
-    "build": "rm -rf ./dist && ncc build ./src/index.ts --license licenses.txt",
+    "build": "rm -rf ./dist && ncc build ./src/index.ts --license licenses.txt && tsup",
     "build-all": "./.github/workflows/build.sh",
     "coverage": "c8 mocha",
     "license-check": "license-checker --production --summary",
