@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.1...v2.0.2) (2024-01-07)
+
+
+### Reverts
+
+* Revert "ci: Downgrade is-semantic-release till it's fixed" ([91c2ab5](https://github.com/sebbo2002/action-is-semantic-pr/commit/91c2ab59d0559a060c11d07973382c465dd3345d))
+
 ## [2.0.1](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.0...v2.0.1) (2023-08-22)
 
 ## [2.0.1-develop.2](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.1-develop.1...v2.0.1-develop.2) (2023-08-21)
