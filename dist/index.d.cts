@@ -31,4 +31,4 @@ declare class Action {
     private static downloadFile;
 }
 
-export { Context, SemanticReleaseAnalyzeContext, Action as default };
+export { type Context, type SemanticReleaseAnalyzeContext, Action as default };
