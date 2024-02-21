@@ -6,7 +6,7 @@ inputs:
     description: 'GitHub token to be used'
     required: true
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.cjs'
 branding:
   icon: check
