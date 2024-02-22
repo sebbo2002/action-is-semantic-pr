@@ -8,6 +8,7 @@ export default defineConfig({
     ],
     format: ['cjs'],
     dts: true,
+    shims: true,
     sourcemap: true,
     minify: true,
     noExternal: [ /(.*)/ ],
