@@ -1,7 +1,7 @@
 import * as core from '@actions/core';
 import * as github  from '@actions/github';
 
-import Action from './lib';
+import Action from './lib/index.js';
 
 try {
     if(!github.context.payload.pull_request) {
