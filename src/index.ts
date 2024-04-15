@@ -13,6 +13,7 @@ try {
     const context = {
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
+        sha: github.context.sha,
         pull_number: github.context.payload.pull_request.number
     };
 
