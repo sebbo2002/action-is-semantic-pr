@@ -1,13 +1,9 @@
 import { CoreInterface } from './core-mock.js';
-import type { Context as SemanticReleaseContext, Commit as SemanticReleaseCommit } from 'semantic-release';
 export interface Context {
     owner: string;
     repo: string;
+    sha: string;
     pull_number: number;
-}
-export interface SemanticReleaseAnalyzeContext extends SemanticReleaseContext {
-    cwd: string;
-    commits: SemanticReleaseCommit[];
 }
 export default class Action {
     private readonly github;

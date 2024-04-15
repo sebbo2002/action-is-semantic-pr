@@ -1,5 +1,3 @@
-import { Context as Context$1, Commit } from 'semantic-release';
-
 type CoreInterface = {
     info(message: string): void;
     error(message: string | Error): void;
@@ -13,11 +11,8 @@ type CoreInterface = {
 interface Context {
     owner: string;
     repo: string;
+    sha: string;
     pull_number: number;
-}
-interface SemanticReleaseAnalyzeContext extends Context$1 {
-    cwd: string;
-    commits: Commit[];
 }
 declare class Action {
     private readonly github;
@@ -31,4 +26,4 @@ declare class Action {
     private static downloadFile;
 }
 
-export { type Context, type SemanticReleaseAnalyzeContext, Action as default };
+export { type Context, Action as default };
