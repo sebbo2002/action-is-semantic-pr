@@ -27,7 +27,7 @@
     "@typescript-eslint/parser": "^7.7.0",
     "@vercel/ncc": "^0.38.1",
     "c8": "^9.1.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-jsonc": "^2.15.1",
     "esm": "^3.2.25",
     "license-checker": "^25.0.1",
