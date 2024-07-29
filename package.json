@@ -11,7 +11,7 @@
     "cosmiconfig": "^9.0.0",
     "semantic-release": "^24.0.0",
     "signale": "^1.4.0",
-    "tsup": "^8.1.0"
+    "tsup": "^8.2.3"
   },
   "description": "GitHub Action that creates an annotation with the resulting release type when using semantic-release",
   "devDependencies": {
