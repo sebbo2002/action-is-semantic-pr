@@ -90,6 +90,8 @@ export default class Action {
         }
 
         const context: AnalyzeCommitsContext = {
+
+            // @ts-expect-error process.env and context.env
             env: process.env,
             envCi: {
                 isCi: true,
@@ -126,6 +128,8 @@ export default class Action {
                 committerDate: commit.commit.committer?.date || new Date().toJSON()
             })),
             releases: [],
+
+            // @ts-expect-error it still works…
             lastRelease: null,
             cwd: process.cwd(),
             stdout: process.stdout,
