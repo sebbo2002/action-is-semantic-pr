@@ -1,15 +1,20 @@
 {
   "author": "Sebastian Pekarek <mail@sebbo.net>",
   "bugs": {
-    "url": "https://github.com/sebbo2002/js-template/issues"
+    "url": "https://github.com/sebbo2002/action-is-semantic-pr/issues"
   },
   "dependencies": {
     "@actions/core": "^1.10.1",
-    "@actions/github": "^6.0.0"
+    "@actions/github": "^6.0.0",
+    "@octokit/rest": "^21.0.1",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "cosmiconfig": "^9.0.0",
+    "semantic-release": "^24.0.0",
+    "signale": "^1.4.0"
   },
-  "description": "A template that I use to start new projects and services.",
+  "description": "GitHub Action that creates an annotation with the resulting release type when using semantic-release",
   "devDependencies": {
-    "@eslint/js": "^9.6.0",
+    "@eslint/js": "^9.8.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
@@ -17,10 +22,11 @@
     "@types/eslint__js": "^8.42.3",
     "@types/express": "^4.17.21",
     "@types/mocha": "^10.0.7",
-    "@types/node": "^20.14.10",
+    "@types/node": "^22.1.0",
+    "@types/signale": "^1.4.7",
     "@vercel/ncc": "^0.38.1",
     "c8": "^10.1.2",
-    "eslint": "^9.6.0",
+    "eslint": "^9.8.0",
     "eslint-plugin-jsonc": "^2.16.0",
     "esm": "^3.2.25",
     "license-checker": "^25.0.1",
@@ -29,10 +35,10 @@
     "semantic-release-license": "^1.0.3",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.2",
-    "tsup": "^8.1.0",
+    "tsup": "^8.2.4",
     "typedoc": "^0.26.3",
-    "typescript": "^5.5.3",
-    "typescript-eslint": "^8.0.0-alpha.41"
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.0-alpha.62"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -40,15 +46,15 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/sebbo2002/js-template#readme",
+  "homepage": "https://github.com/sebbo2002/action-is-semantic-pr#readme",
   "license": "MIT",
-  "name": "@sebbo2002/js-template-test",
+  "name": "@sebbo2002/action-is-semantic-pr",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sebbo2002/js-template.git"
+    "url": "git+https://github.com/sebbo2002/action-is-semantic-pr.git"
   },
   "scripts": {
-    "build": "rm -rf ./dist && ncc build ./src/index.ts --license licenses.txt",
+    "build": "rm -rf ./dist && ncc build ./src/index.ts --license licenses.txt && tsup",
     "build-all": "./.github/workflows/build.sh",
     "coverage": "c8 mocha",
     "license-check": "license-checker --production --summary",

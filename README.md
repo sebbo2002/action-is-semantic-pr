@@ -1,29 +1,29 @@
-# template
+# @sebbo2002/is-semantic-pr
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
-Here would be a very short description of the project. So in this example it would be a short information that this is
-a template that I use to start new projects and services.
-
-
-## 🚨 Template Usage Checklist
-- [ ] Update project name in `package.json`
-- [ ] Create `main` and `develop` branches
-- [ ] Set `develop` as default branch
-- [ ] Update `action.yml` ([Branding Cheat Sheet](https://actions-cool.github.io/github-action-branding/))
-- [ ] Go through repo settings
-    - [ ] Add `main` protected branch
-        - Require a pull request before merging
-        - Require `Release` status checks to pass before merging
-        - Lock branch
+It happens to me very often that I merge a pull request that does not contain any semantic commits and therefore no 
+release is generated. This bot is supposed to help me by looking at the commits of the PR, determining the release type 
+using `@semantic-release/commit-analyzer` and then leaving an [annotation](https://github.com/actions/toolkit/tree/main/packages/core#annotations) 
+in the PR what kind of release would be triggered. If no release is generated during the merge, an appropriate warning 
+is left.
 
 
 ## ⚡️ Quick Start
 
-```
-uses: sebbo2002/action-foo-bar
-with:
-  token: ${{ secrets.GITHUB_TOKEN }}
+```yaml
+name: is-semantic-pr
+on:
+  - pull_request
+
+jobs:
+  release-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🤖 is-semantic-release
+        uses: sebbo2002/action-is-semantic-pr@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 
