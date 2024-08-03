@@ -18,7 +18,7 @@ try {
     };
 
     const action = new Action(token, context, core);
-    action.run().catch(error => core.setFailed(error.message));
+    action.run().catch((error: unknown) => core.setFailed(String(error)));
 } catch (error) {
     if(error instanceof Error) {
         core.setFailed(error.message);
