@@ -26,6 +26,7 @@
     "@types/signale": "^1.4.7",
     "@vercel/ncc": "^0.38.1",
     "c8": "^10.1.2",
+    "esbuild": "^0.23.0",
     "eslint": "^9.8.0",
     "eslint-plugin-jsonc": "^2.16.0",
     "esm": "^3.2.25",
@@ -35,7 +36,6 @@
     "semantic-release-license": "^1.0.3",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.2",
-    "tsup": "^8.2.4",
     "typedoc": "^0.26.3",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.0-alpha.62"
@@ -54,7 +54,7 @@
     "url": "git+https://github.com/sebbo2002/action-is-semantic-pr.git"
   },
   "scripts": {
-    "build": "rm -rf ./dist && ncc build ./src/index.ts --license licenses.txt && tsup",
+    "build": "rm -rf ./dist && esbuild ./src/index.ts --bundle --platform=node --target=node18 --sourcemap --outfile=./dist/index.js --inject:./src/cjs-shim.ts --format=esm --minify && cp -R ./node_modules/conventional-changelog-writer/templates ./dist",
     "build-all": "./.github/workflows/build.sh",
     "coverage": "c8 mocha",
     "license-check": "license-checker --production --summary",
