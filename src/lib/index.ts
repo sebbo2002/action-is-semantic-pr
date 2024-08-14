@@ -9,23 +9,17 @@ import { createWriteStream } from 'fs';
 import { cosmiconfig } from 'cosmiconfig';
 
 import { analyzeCommits } from '@semantic-release/commit-analyzer';
+import { AnalyzeCommitsContext } from 'semantic-release';
 
-import type {
-    Context as SemanticReleaseContext,
-    Commit as SemanticReleaseCommit
-} from 'semantic-release';
-import { LoggerFunction } from 'semantic-release';
+import signale from 'signale';
+const { Signale } = signale;
 
 
 export interface Context {
     owner: string;
     repo: string;
+    sha: string;
     pull_number: number;
-}
-
-export interface SemanticReleaseAnalyzeContext extends SemanticReleaseContext {
-    cwd: string;
-    commits: SemanticReleaseCommit[];
 }
 
 const RELEVANT_SEMANTIC_RELEASE_FILES = [
@@ -95,11 +89,19 @@ export default class Action {
             this.core.info('No semantic-release configuration found');
         }
 
-        const loggerFn: LoggerFunction = () => ({});
-        const context: SemanticReleaseAnalyzeContext = {
-            branch: {
-                name: ''
+        const context: AnalyzeCommitsContext = {
+
+            // @ts-expect-error process.env and context.env
+            env: process.env,
+            envCi: {
+                isCi: true,
+                commit: this.context.sha,
+                branch: pr.base.ref,
             },
+            branch: {
+                name: pr.base.ref
+            },
+            branches: [],
             commits: commits.map(commit => ({
                 commit: {
                     long: commit.sha,
@@ -125,27 +127,14 @@ export default class Action {
                 hash: commit.sha,
                 committerDate: commit.commit.committer?.date || new Date().toJSON()
             })),
+            releases: [],
+
+            // @ts-expect-error it still works…
+            lastRelease: null,
             cwd: process.cwd(),
-            env: {},
-            logger: {
-                await: loggerFn,
-                complete: loggerFn,
-                debug: loggerFn,
-                fatal: loggerFn,
-                fav: loggerFn,
-                info: loggerFn,
-                log: loggerFn,
-                note: loggerFn,
-                pause: loggerFn,
-                pending: loggerFn,
-                star: loggerFn,
-                start: loggerFn,
-                success: loggerFn,
-                wait: loggerFn,
-                warn: loggerFn,
-                watch: loggerFn,
-                error: message => this.core.error(message)
-            }
+            stdout: process.stdout,
+            stderr: process.stderr,
+            logger: new Signale({ disabled: true })
         };
 
         const hasConventionalCommitLike = !!commits.find(commit => Action.isConventionalCommitLike(commit.commit.message));
@@ -167,7 +156,7 @@ export default class Action {
         return !!message.match(/^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?: .+/);
     }
 
-    private async getPR(): Promise<{id: number, merged: boolean, base: {sha: string}}> {
+    private async getPR(): Promise<{id: number, merged: boolean, base: {sha: string, ref: string}}> {
         try {
             const { data: pr } = await this.github.rest.pulls.get({
                 ...this.context

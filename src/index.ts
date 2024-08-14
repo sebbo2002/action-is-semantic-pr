@@ -1,7 +1,7 @@
 import * as core from '@actions/core';
 import * as github  from '@actions/github';
 
-import Action from './lib';
+import Action from './lib/index.js';
 
 try {
     if(!github.context.payload.pull_request) {
@@ -13,11 +13,12 @@ try {
     const context = {
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
+        sha: github.context.sha,
         pull_number: github.context.payload.pull_request.number
     };
 
     const action = new Action(token, context, core);
-    action.run().catch(error => core.setFailed(error.message));
+    action.run().catch((error: unknown) => core.setFailed(String(error)));
 } catch (error) {
     if(error instanceof Error) {
         core.setFailed(error.message);

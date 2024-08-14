@@ -19,6 +19,7 @@ describe('Action', function () {
         const context: Context = {
             owner: 'sebbo2002',
             repo: 'ical-generator',
+            sha: 'e3f2161fcd66c9eb774c537dade79953fa57b830',
             pull_number: -1
         };
 
@@ -31,6 +32,7 @@ describe('Action', function () {
         const context: Context = {
             owner: 'sebbo2002',
             repo: 'ical-generator',
+            sha: 'e3f2161fcd66c9eb774c537dade79953fa57b830',
             pull_number: 368
         };
 
@@ -45,6 +47,7 @@ describe('Action', function () {
         const context: Context = {
             owner: 'sebbo2002',
             repo: 'ical-generator',
+            sha: 'e3f2161fcd66c9eb774c537dade79953fa57b830',
             pull_number: 110
         };
 
@@ -61,6 +64,7 @@ describe('Action', function () {
         const context: Context = {
             owner: 'sebbo2002',
             repo: 'ical-generator',
+            sha: 'e3f2161fcd66c9eb774c537dade79953fa57b830',
             pull_number: 370
         };
 
@@ -82,6 +86,7 @@ describe('Action', function () {
         const context: Context = {
             owner: 'sebbo2002',
             repo: 'ical-generator',
+            sha: 'e3f2161fcd66c9eb774c537dade79953fa57b830',
             pull_number: 215
         };
 
@@ -103,6 +108,7 @@ describe('Action', function () {
         const context: Context = {
             owner: 'sebbo2002',
             repo: 'ical-generator',
+            sha: 'e3f2161fcd66c9eb774c537dade79953fa57b830',
             pull_number: 190
         };
 
