@@ -1,5 +1,5 @@
 import { Octokit } from '@octokit/rest';
-import { CoreInterface } from './core-mock.js';
+import { type CoreInterface } from './core-mock.js';
 
 import { mkdtemp, rm } from 'fs/promises';
 import { join } from 'path';
@@ -9,7 +9,7 @@ import { createWriteStream } from 'fs';
 import { cosmiconfig } from 'cosmiconfig';
 
 import { analyzeCommits } from '@semantic-release/commit-analyzer';
-import { AnalyzeCommitsContext } from 'semantic-release';
+import { type AnalyzeCommitsContext } from 'semantic-release';
 
 import signale from 'signale';
 const { Signale } = signale;
