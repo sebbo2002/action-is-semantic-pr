@@ -1,3 +1,22 @@
+# [3.0.0](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.3...v3.0.0) (2025-01-09)
+
+
+### Bug Fixes
+
+* **deps:** downgrade eslint to v9.13.0 to resolve typescript-eslint issue ([49e1d11](https://github.com/sebbo2002/action-is-semantic-pr/commit/49e1d11d5dc9f8996e4007ba383f6cbb4016bc53)), closes [#10353](https://github.com/sebbo2002/action-is-semantic-pr/issues/10353) [typescript-eslint/typescript-eslint#10353](https://github.com/typescript-eslint/typescript-eslint/issues/10353)
+
+
+### chore
+
+* Drop support for node.js v19 and v21 ([2fff079](https://github.com/sebbo2002/action-is-semantic-pr/commit/2fff079040a377fbe9ecc340388f6a29b863cf80))
+
+
+### BREAKING CHANGES
+
+* Drop node.js v21 Support
+
+These node.js versions are no longer supported. For more information see https://nodejs.dev/en/about/releases/
+
 ## [2.0.3](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.2...v2.0.3) (2024-08-14)
 
 ## [2.0.2](https://github.com/sebbo2002/action-is-semantic-pr/compare/v2.0.1...v2.0.2) (2024-01-07)
