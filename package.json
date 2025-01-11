@@ -54,7 +54,7 @@
     "url": "git+https://github.com/sebbo2002/action-is-semantic-pr.git"
   },
   "scripts": {
-    "build": "rm -rf ./dist && esbuild ./src/index.ts --bundle --platform=node --target=node18 --sourcemap --outfile=./dist/index.js --inject:./src/cjs-shim.ts --format=esm --minify && cp -R ./node_modules/conventional-changelog-writer/templates ./dist",
+    "build": "rm -rf ./dist && esbuild ./src/index.ts --bundle --platform=node --target=node18 --sourcemap --outfile=./dist/action/index.js --inject:./src/cjs-shim.ts --format=esm --minify && jq '{version: .version}' ./package.json > ./dist/action/package.json && cp -R ./node_modules/conventional-changelog-writer/templates ./dist",
     "build-all": "./.github/workflows/build.sh",
     "coverage": "c8 mocha",
     "license-check": "license-checker --production --summary",
