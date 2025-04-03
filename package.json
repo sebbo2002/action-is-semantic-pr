@@ -14,12 +14,12 @@
   },
   "description": "GitHub Action that creates an annotation with the resulting release type when using semantic-release",
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
+    "@eslint/js": "^9.23.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^7.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.1",
-    "@types/express": "^5.0.0",
+    "@types/express": "^5.0.1",
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.13.10",
     "@types/signale": "^1.4.7",
@@ -35,7 +35,7 @@
     "semantic-release-license": "^1.0.3",
     "source-map-support": "^0.5.21",
     "tsx": "^4.19.3",
-    "typedoc": "^0.28.0",
+    "typedoc": "^0.28.1",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1"
   },
