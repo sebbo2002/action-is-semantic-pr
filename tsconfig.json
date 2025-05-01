@@ -11,13 +11,9 @@
         "sourceMap": true,
         "strict": true,
         "target": "es2022",
-        "typeRoots": [
-            "node_modules/@types",
-            "src/types"
-        ],
+        "typeRoots": ["node_modules/@types", "src/types"],
         "verbatimModuleSyntax": true
     },
-    "include": [
-        "src/**/*"
-    ]
+    "exclude": ["**/*.spec.ts"],
+    "include": ["src/**/*"]
 }
