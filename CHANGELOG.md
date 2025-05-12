@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/sebbo2002/action-is-semantic-pr/compare/v3.0.2...v4.0.0) (2025-05-12)
+
+### chore
+
+- Drop node v18 support ([3e18405](https://github.com/sebbo2002/action-is-semantic-pr/commit/3e18405ac1e1be738a414623f97169c802567f99))
+
+### BREAKING CHANGES
+
+- Drop node.js v18 Support
+
+This node.js version is no longer supported. For more information see https://nodejs.dev/en/about/releases/
+
 ## [3.0.2](https://github.com/sebbo2002/action-is-semantic-pr/compare/v3.0.1...v3.0.2) (2025-03-16)
 
 ## [3.0.1](https://github.com/sebbo2002/action-is-semantic-pr/compare/v3.0.0...v3.0.1) (2025-01-11)
