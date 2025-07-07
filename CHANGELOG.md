@@ -1,3 +1,5 @@
+## [4.0.2](https://github.com/sebbo2002/action-is-semantic-pr/compare/v4.0.1...v4.0.2) (2025-07-07)
+
 ## [4.0.1](https://github.com/sebbo2002/action-is-semantic-pr/compare/v4.0.0...v4.0.1) (2025-06-18)
 
 # [4.0.0](https://github.com/sebbo2002/action-is-semantic-pr/compare/v3.0.2...v4.0.0) (2025-05-12)
