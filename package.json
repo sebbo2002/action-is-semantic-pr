@@ -4,7 +4,7 @@
         "url": "https://github.com/sebbo2002/action-is-semantic-pr/issues"
     },
     "dependencies": {
-        "@actions/core": "^2.0.3",
+        "@actions/core": "^3.0.0",
         "@actions/github": "^9.0.0",
         "@octokit/rest": "^22.0.1",
         "@semantic-release/commit-analyzer": "^13.0.1",
