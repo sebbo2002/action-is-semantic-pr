@@ -210,7 +210,7 @@ export default class Action {
             return pr;
         } catch (error) {
             throw new Error(`Unable to fetch PR information: ${error}`, {
-                cause: error
+                cause: error,
             });
         }
     }
