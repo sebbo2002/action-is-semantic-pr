@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/sebbo2002/action-is-semantic-pr/compare/v4.0.14...v5.0.0) (2026-06-02)
+
+### Features
+
+- Drop support for node.js v20 and v23 ([d949a08](https://github.com/sebbo2002/action-is-semantic-pr/commit/d949a088c82ede8768c62556cfc0da9ce2255b1b))
+
+### BREAKING CHANGES
+
+- Drop node.js v20 / v23 Support
+
+This node.js version is no longer supported. For more information see https://nodejs.dev/en/about/releases/
+
 ## [4.0.14](https://github.com/sebbo2002/action-is-semantic-pr/compare/v4.0.13...v4.0.14) (2026-04-22)
 
 ## [4.0.13](https://github.com/sebbo2002/action-is-semantic-pr/compare/v4.0.12...v4.0.13) (2026-03-17)
