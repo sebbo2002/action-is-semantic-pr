@@ -8,7 +8,7 @@
         "@actions/github": "^9.1.1",
         "@octokit/rest": "^22.0.1",
         "@semantic-release/commit-analyzer": "^13.0.1",
-        "cosmiconfig": "^9.0.2",
+        "cosmiconfig": "^10.0.0",
         "signale": "^1.4.0"
     },
     "description": "GitHub Action that creates an annotation with the resulting release type when using semantic-release",
