@@ -1,3 +1,9 @@
+## [5.0.4](https://github.com/sebbo2002/action-is-semantic-pr/compare/v5.0.3...v5.0.4) (2026-10-29)
+
+### Bug Fixes
+
+- **security:** bump npm to 11.21.1 to resolve bundled brace-expansion & postcss-selector-parser advisories ([18d3dac](https://github.com/sebbo2002/action-is-semantic-pr/commit/18d3dac5727d9468e8a03a2b17e7eac8a00aee78))
+
 ## [5.0.3](https://github.com/sebbo2002/action-is-semantic-pr/compare/v5.0.2...v5.0.3) (2026-09-30)
 
 ## [5.0.2](https://github.com/sebbo2002/action-is-semantic-pr/compare/v5.0.1...v5.0.2) (2026-08-25)
