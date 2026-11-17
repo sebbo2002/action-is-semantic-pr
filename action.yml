@@ -1,13 +1,13 @@
-name: 'js-template'
+name: 'is-semantic-pr'
 author: 'Sebastian Pekarek'
-description: 'Template I use for my GitHub Actions'
+description: 'Creates an annotation with the resulting release type when using semantic-release'
 inputs:
   token:
     description: 'GitHub token to be used'
     required: true
 runs:
   using: 'node20'
-  main: 'dist/index.js'
+  main: 'dist/action/index.js'
 branding:
-  icon: git-branch
-  color: gray-dark
+  icon: check
+  color: yellow
