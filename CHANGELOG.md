@@ -1,3 +1,9 @@
+## [5.0.5](https://github.com/sebbo2002/action-is-semantic-pr/compare/v5.0.4...v5.0.5) (2026-11-18)
+
+### Bug Fixes
+
+- sync package-lock.json with package.json ([37bd956](https://github.com/sebbo2002/action-is-semantic-pr/commit/37bd956205c15269913294ef8db842bd8d6e67de))
+
 ## [5.0.4](https://github.com/sebbo2002/action-is-semantic-pr/compare/v5.0.3...v5.0.4) (2026-10-29)
 
 ### Bug Fixes
